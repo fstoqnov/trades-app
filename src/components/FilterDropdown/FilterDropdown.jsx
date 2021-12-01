@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -11,7 +11,7 @@ const FilterDropdown = ({
   selected,
   selectAllText,
 }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const open = Boolean(anchorEl);
 
