@@ -1,15 +1,33 @@
 module.exports = {
   root: true,
-  extends: '@react-community',
-  plugins: ['import'],
+  parserOptions: {
+    parser: "babel-eslint",
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
   env: {
+    browser: true,
+    amd: true,
+    node: true,
+    es6: true,
     jest: true,
   },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+  ],
   rules: {
-    'import/no-default-export': 2,
-    
-    'no-shadow': 2,
-    'arrow-body-style': ['error', 'as-needed'],
-    'prefer-const': 2,
+    "no-var": "error",
+    "prettier/prettier": ["error"],
+    "react/prop-types": 0,
   },
 };
