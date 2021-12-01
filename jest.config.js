@@ -4,7 +4,7 @@ const jestConfig = {
   transform: {
     "^.+\\.jsx?$": "babel-jest",
   },
-  testMatch: ["**/__tests__/components.jsx"],
+  testMatch: ["./src/components/TradesTable/TradesTable.test.jsx"],
 };
 
 module.exports = jestConfig;
