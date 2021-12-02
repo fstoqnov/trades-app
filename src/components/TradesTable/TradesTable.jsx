@@ -234,6 +234,7 @@ const TradesTable = () => {
       }
       clearNewTradeItem();
     } else {
+      clearNewTradeItem();
       alert("Please enter all fields in order to submit a new trade");
     }
   };
